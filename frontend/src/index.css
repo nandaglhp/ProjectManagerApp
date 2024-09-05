@@ -1,0 +1,211 @@
+@import url("./assets/fonts/fonts.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    @apply text-dark-font btn-text-lg bg-primary-100 rounded py-3 px-6;
+  }
+
+  button:hover {
+    @apply bg-primary-200;
+  }
+
+  button:focus {
+    @apply outline-none ring ring-dark-blue-50
+  }
+
+  input, select {
+    @apply text-dark-font body-text-lg border border-solid border-grayscale-400 rounded py-3 px-6;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply outline-none ring ring-dark-blue-50;
+  }
+}
+
+@layer components {
+
+  /* Tiptap */
+  .tiptap p {
+    @apply font-serif text-base;
+  }
+
+  .tiptap h1 {
+    @apply font-sans text-4xl font-bold;
+  }
+
+  .tiptap h2 {
+    @apply font-sans text-[2rem] font-medium;
+  }
+
+  .tiptap blockquote {
+    @apply ps-4 border-l-2 border-grayscale-300;
+  }
+
+  .tiptap pre {
+    @apply bg-grayscale-300/50 text-dark-font font-mono py-3 px-4 rounded;
+  }
+
+  .tiptap pre code {
+    @apply text-inherit p-0 bg-grayscale-0 text-sm;
+  }
+
+  .tiptap ul {
+    @apply px-4 list-disc;
+  }
+
+  .tiptap ol {
+    @apply px-4 list-decimal body-text-md;
+  }
+
+  .tiptap-collaboration-cursor-caret {
+    @apply relative -mx-px border-x pointer-events-none break-normal border-[#0d0d0d];
+  }
+
+  .tiptap-collaboration-cursor-label {
+    @apply absolute -top-[1.4em] rounded-[3px] rounded-bl-none -left-[1px] py-[0.1rem] px-[0.3rem] label-text text-[#0d0d0d] leading-normal whitespace-nowrap select-none;
+  }
+
+  .tiptap img {
+    @apply max-w-full h-auto;
+  }
+
+  .tiptap a {
+    @apply underline text-blue-300;
+  }
+
+  .tiptap a:hover {
+    @apply cursor-default;
+  }
+
+  .ProseMirror-selectednode :is(img:active) {
+    @apply outline outline-2 outline-dark-blue-50;
+  }
+
+  /* React calendar */
+  .react-calendar {
+    @apply body-text-md m-auto;
+  }
+
+  .react-calendar * {
+    @apply no-underline;
+  }
+
+  .react-calendar button {
+    @apply btn-text-lg m-0 py-1 px-1 m-auto bg-grayscale-0 hover:bg-grayscale-0;
+  }
+}
+
+@layer utilities {
+
+  .heading-xxl {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .heading-xl {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+
+  .heading-lg {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .heading-md {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .heading-sm {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .heading-xs {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .heading-xxs {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .body-text-lg {
+    font-family: "Noto Serif", serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  .body-text-md {
+    font-family: "Noto Serif", serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .body-text-sm {
+    font-family: "Noto Serif", serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  .body-text-xs {
+    font-family: "Noto Serif", serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  .label-text {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  .btn-text-xl {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .btn-text-lg {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .btn-text-md {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .btn-text-sm {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .btn-text-xs {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
